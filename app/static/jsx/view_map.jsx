@@ -1,4 +1,4 @@
-var CSViewMap  = React.createClass({displayName: "CSViewMap",
+var CSViewMap  = React.createClass({
     getInitialState: function(){
         return {coords:[]}
     },
@@ -30,15 +30,15 @@ var CSViewMap  = React.createClass({displayName: "CSViewMap",
         */
         var csMap;
         if(this.state.coords.length < 2){
-            csMap = React.createElement(CSMap, null)
+            csMap = <CSMap />
         }else{
-            csMap = React.createElement(CSMap, {coords: this.state.coords, zoom: 12})
+            csMap = <CSMap coords={this.state.coords} zoom={12}/>
         }
         return csMap;
     }
 });
 
-var CSMap = React.createClass({displayName: "CSMap",
+var CSMap = React.createClass({
     getInitialState: function() {
         return {markers:[],map:null}
     },
@@ -70,14 +70,14 @@ var CSMap = React.createClass({displayName: "CSMap",
     },
     render: function(){
         return (
-            React.createElement("div", {className: "map-canvas"})
+            <div className="map-canvas"></div>
         )
     }
 });
 
 $(document).ready(function(){
     React.render(
-        React.createElement(CSViewMap, null),
+        <CSViewMap />,
         $('.content')[0]
     );
 });
