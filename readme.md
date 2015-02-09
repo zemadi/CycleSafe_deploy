@@ -22,6 +22,8 @@ Explanation of command in order:
 `--no-cache-dir` the program uses some sort of cache optimization without this flag, but it also creates unnecessary files. 
 
 
+## Instructions for getting set up (from scratch):
+
 ** Notes:**
  This is the CycleSafe_deploy project, found here: https://github.com/zemadi/CycleSafe_deploy (python/django)
  It is a reimplementation of this project: https://github.com/zemadi/CycleSafe (groovy/rails)
@@ -29,7 +31,6 @@ Explanation of command in order:
 **Installing into a virtual evironment is highly recommended!**
 NOTE: You will need to install MySQL for running in production mode.
 
-## Instructions for getting set up (from scratch):
 1. install python 2.7
 2. install pip (to get django)
 3. > python get-pip.py
