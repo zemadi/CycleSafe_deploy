@@ -1,3 +1,27 @@
+##React.js Instructions
+
+HTML templates will only ever read from `/static/js`. `/static/jsx` should only be used for developing the React files. [JSX](http://facebook.github.io/react/docs/jsx-in-depth.html) allows you to define views with HTML syntax right in your Javascript. They are not strings, but rather actual markup. After writing your .jsx file in the `/jsx`, you must compile it to Javascript.
+
+###Compiling JSX to Javascript
+
+`npm install -g react-tools` 
+Note: React does not have any node dependencies of any kind. The compiler is just distributed via npm.
+
+Then, `cd` into the `/static` directory and run:
+
+`jsx -x jsx jsx js --no-cache-dir`
+
+Explanation of command in order:
+
+`-x jsx` specifies that the files to be compiled will have a `.jsx` extension
+
+`jsx` the directory of all the JSX files (input) 
+
+`js`  the directory of all the Js files (output)
+
+`--no-cache-dir` the program uses some sort of cache optimization without this flag, but it also creates unnecessary files. 
+
+
 ** Notes:**
  This is the CycleSafe_deploy project, found here: https://github.com/zemadi/CycleSafe_deploy (python/django)
  It is a reimplementation of this project: https://github.com/zemadi/CycleSafe (groovy/rails)
